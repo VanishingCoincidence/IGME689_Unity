@@ -119,6 +119,134 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &46082021
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 46082024}
+  - component: {fileID: 46082023}
+  - component: {fileID: 46082022}
+  m_Layer: 0
+  m_Name: ArcGIS Map
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &46082022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46082021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c703502c1493f5b4eb3e95b2efe0271e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  apiKey: AAPTxy8BH1VEsoebNVZXo8HurNr8CSYlBHKwAHOBnnbGOT7wOTEvTWipOAn_JU6CKU1-350mhxyPH26RdO3nyXbNqxGpDjrj9dVzKO7FBy6Cr7zCPpheBqXwntI3obB3MFHc-LItQLlwJeZ8kWbWSiXDbWhcO5Ie7sEQQMhYS5V1M38SQfR9I9KpoCnGlY1KLeDyip3Dku2PkGbVPZn2S007cQcC5wLY_8di6h9eKXajTl9aw1HnzROt9ThmyJLIhDVgAT1_sBvmEWDy
+  basemap: 
+  basemapType: 0
+  basemapAuthentication:
+    ConfigurationIndex: -1
+  basemapAuthenticationType: 1
+  mapElevation:
+    ElevationSources:
+    - Name: Terrain 3D
+      Type: 0
+      Source: https://elevation3d.arcgis.com/arcgis/rest/services/WorldElevation3D/Terrain3D/ImageServer
+      IsEnabled: 0
+      Authentication:
+        ConfigurationIndex: -1
+      AuthenticationType: 1
+    ExaggerationFactor: 1
+    MeshModifications:
+      IsEnabled: 1
+      MeshModifications: []
+  enableExtent: 0
+  extent:
+    GeographicCenter:
+      X: 0
+      Y: 0
+      Z: 0
+      SRWkid: 4326
+      SpatialReference:
+        WKID: 4326
+        VerticalWKID: 0
+      version: 1
+    ExtentShape: 2
+    ShapeDimensions:
+      x: 0
+      y: 0
+    UseOriginAsCenter: 0
+  layers: []
+  originPosition:
+    X: 0
+    Y: 0
+    Z: 0
+    SRWkid: 4326
+    SpatialReference:
+      WKID: 4326
+      VerticalWKID: 0
+    version: 1
+  mapType: 1
+  useCustomMapSpatialReference: 0
+  customMapSpatialReference:
+    WKID: 4326
+    VerticalWKID: 0
+  meshCollidersEnabled: 0
+  configurations: []
+  oauthUserConfigurations: []
+  version: 4
+  dataFetchWithSceneView: 1
+  editorModeEnabled: 1
+  rebaseWithSceneView: 0
+  RootChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  isInitialized: 0
+--- !u!114 &46082023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46082021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 265b6a392115d8a4aa7154d8c9356e26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LocalPosition:
+    x: 0
+    y: 0
+    z: 0
+  m_LocalRotation:
+    value:
+      x: 0
+      y: 0
+      z: 0
+      w: 1
+--- !u!4 &46082024
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46082021}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &157207112
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,7 +276,7 @@ Light:
   serializedVersion: 11
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 35819.676
+  m_Intensity: 130000
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -191,14 +319,14 @@ Light:
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
-  m_ColorTemperature: 9711
+  m_ColorTemperature: 6500
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
   m_ShadowRadius: 0
-  m_ShadowAngle: 1.5
+  m_ShadowAngle: 2.5
   m_LightUnit: 2
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 0
@@ -211,7 +339,7 @@ Transform:
   m_GameObject: {fileID: 157207112}
   serializedVersion: 2
   m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 36, y: 100, z: 85}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -263,7 +391,7 @@ MonoBehaviour:
   m_AreaLightShadowCone: 120
   m_UseScreenSpaceShadows: 0
   m_InteractsWithSky: 1
-  m_AngularDiameter: 1.5
+  m_AngularDiameter: 2.5
   diameterMultiplerMode: 0
   diameterMultiplier: 1
   diameterOverride: 0.5
@@ -359,270 +487,6 @@ MonoBehaviour:
   m_ObsoleteUseShadowQualitySettings: 0
   m_ObsoleteCustomShadowResolution: 512
   m_ObsoleteContactShadows: 0
---- !u!1 &197556204
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 197556206}
-  - component: {fileID: 197556205}
-  m_Layer: 0
-  m_Name: SphereSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &197556205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 197556204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6f23488c7b677144bf6f0ed7f68ac05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  readCSV: {fileID: 1002344284}
-  confirmedCasesButton: {fileID: 0}
-  sphere: {fileID: 7281497812055037492, guid: 4ffcd818186740741bff83cdfa27e7da, type: 3}
---- !u!4 &197556206
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 197556204}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &208549024
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 208549027}
-  - component: {fileID: 208549026}
-  - component: {fileID: 208549025}
-  m_Layer: 0
-  m_Name: ArcGIS Map
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &208549025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 208549024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c703502c1493f5b4eb3e95b2efe0271e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  apiKey: AAPTxy8BH1VEsoebNVZXo8HurNr8CSYlBHKwAHOBnnbGOT7wOTEvTWipOAn_JU6CKU1-350mhxyPH26RdO3nyXbNqxGpDjrj9dVzKO7FBy6Cr7zCPpheBqXwntI3obB3MFHc-LItQLlwJeZ8kWbWSiXDbWhcO5Ie7sEQQMhYS5V1M38SQfR9I9KpoCnGlY1KLeDyip3Dku2PkGbVPZn2S007cQcC5wLY_8di6h9eKXajTl9aw1HnzROt9ThmyJLIhDVgAT1_sBvmEWDy
-  basemap: https://basemapstyles-api.arcgis.com/arcgis/rest/services/styles/v2/webmaps/arcgis/charted-territory
-  basemapType: 0
-  basemapAuthentication:
-    ConfigurationIndex: -1
-  basemapAuthenticationType: 1
-  mapElevation:
-    ElevationSources:
-    - Name: Terrain 3D
-      Type: 0
-      Source: https://elevation3d.arcgis.com/arcgis/rest/services/WorldElevation3D/Terrain3D/ImageServer
-      IsEnabled: 1
-      Authentication:
-        ConfigurationIndex: -1
-      AuthenticationType: 1
-    ExaggerationFactor: 1
-    MeshModifications:
-      IsEnabled: 1
-      MeshModifications: []
-  enableExtent: 0
-  extent:
-    GeographicCenter:
-      X: 0
-      Y: 0
-      Z: 0
-      SRWkid: 4326
-      SpatialReference:
-        WKID: 4326
-        VerticalWKID: 0
-      version: 1
-    ExtentShape: 1
-    ShapeDimensions:
-      x: 6500000
-      y: 4000000
-    UseOriginAsCenter: 1
-  layers:
-  - Name: COVID Cases
-    Type: 6
-    Source: https://services3.arcgis.com/qNmLqQsxa9OgafDD/arcgis/rest/services/COVID_19_Cases_(1)/MapServer
-    Opacity: 1
-    IsVisible: 0
-    Authentication:
-      ConfigurationIndex: 0
-    AuthenticationType: 1
-    BuildingSceneLayerFilter:
-      ActiveBuildingAttributeFilterIndex: 0
-      BuildingAttributeFilters: []
-      IsBuildingAttributeFilterEnabled: 0
-      IsBuildingDisciplinesCategoriesFilterEnabled: 0
-      EnabledCategories: 
-      EnabledDisciplines: 
-    MeshModifications:
-      IsEnabled: 0
-      MeshModifications: []
-    SpatialFeatureFilter:
-      IsEnabled: 0
-      Polygons: []
-      Type: 0
-  - Name: Transit
-    Type: 0
-    Source: https://www.arcgis.com/home/item.html?id=1c28f1944276445a99f5b554c3c07771
-    Opacity: 0.9
-    IsVisible: 0
-    Authentication:
-      ConfigurationIndex: 0
-    AuthenticationType: 1
-    BuildingSceneLayerFilter:
-      ActiveBuildingAttributeFilterIndex: 0
-      BuildingAttributeFilters: []
-      IsBuildingAttributeFilterEnabled: 0
-      IsBuildingDisciplinesCategoriesFilterEnabled: 0
-      EnabledCategories: 
-      EnabledDisciplines: 
-    MeshModifications:
-      IsEnabled: 0
-      MeshModifications: []
-    SpatialFeatureFilter:
-      IsEnabled: 0
-      Polygons: []
-      Type: 0
-  - Name: industrial
-    Type: 0
-    Source: https://www.arcgis.com/home/item.html?id=1c28f1944276445a99f5b554c3c07771
-    Opacity: 0.6
-    IsVisible: 0
-    Authentication:
-      ConfigurationIndex: 0
-    AuthenticationType: 1
-    BuildingSceneLayerFilter:
-      ActiveBuildingAttributeFilterIndex: 0
-      BuildingAttributeFilters: []
-      IsBuildingAttributeFilterEnabled: 0
-      IsBuildingDisciplinesCategoriesFilterEnabled: 0
-      EnabledCategories: 
-      EnabledDisciplines: 
-    MeshModifications:
-      IsEnabled: 0
-      MeshModifications: []
-    SpatialFeatureFilter:
-      IsEnabled: 0
-      Polygons: []
-      Type: 0
-  - Name: pop density
-    Type: 0
-    Source: https://www.arcgis.com/home/item.html?id=7de726fabcc149f185b0bf8acde82878
-    Opacity: 0.5
-    IsVisible: 0
-    Authentication:
-      ConfigurationIndex: 0
-    AuthenticationType: 1
-    BuildingSceneLayerFilter:
-      ActiveBuildingAttributeFilterIndex: 0
-      BuildingAttributeFilters: []
-      IsBuildingAttributeFilterEnabled: 0
-      IsBuildingDisciplinesCategoriesFilterEnabled: 0
-      EnabledCategories: 
-      EnabledDisciplines: 
-    MeshModifications:
-      IsEnabled: 0
-      MeshModifications: []
-    SpatialFeatureFilter:
-      IsEnabled: 0
-      Polygons: []
-      Type: 0
-  originPosition:
-    X: -74
-    Y: 40.72
-    Z: 0
-    SRWkid: 4326
-    SpatialReference:
-      WKID: 4326
-      VerticalWKID: 0
-    version: 1
-  mapType: 1
-  useCustomMapSpatialReference: 0
-  customMapSpatialReference:
-    WKID: 4326
-    VerticalWKID: 0
-  meshCollidersEnabled: 0
-  configurations: []
-  oauthUserConfigurations: []
-  version: 4
-  dataFetchWithSceneView: 1
-  editorModeEnabled: 1
-  rebaseWithSceneView: 0
-  RootChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  isInitialized: 1
---- !u!114 &208549026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 208549024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 265b6a392115d8a4aa7154d8c9356e26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_LocalPosition:
-    x: -8237642.318702245
-    y: 0
-    z: 4971129.040475637
-  m_LocalRotation:
-    value:
-      x: 0
-      y: 0
-      z: 0
-      w: 1
---- !u!4 &208549027
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 208549024}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1823688467}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &432432459
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,56 +536,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1002344283
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1002344285}
-  - component: {fileID: 1002344284}
-  m_Layer: 0
-  m_Name: DataHolder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1002344284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1002344283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0a3909ce96b1a34287f35bc0a1088aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textAssetData: {fileID: 4900000, guid: 7294cdfd69c993e40824768826bb0e6f, type: 3}
-  dataColumns: 13
-  dataRows: 63
-  covidCaseList:
-    covidCase: []
-    size: 0
---- !u!4 &1002344285
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1002344283}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -144014.8, y: 0, z: -1616592}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1823688464
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,15 +545,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1823688467}
-  - component: {fileID: 1823688472}
   - component: {fileID: 1823688466}
   - component: {fileID: 1823688465}
   - component: {fileID: 1823688468}
-  - component: {fileID: 1823688471}
-  - component: {fileID: 1823688470}
-  - component: {fileID: 1823688469}
   m_Layer: 0
-  m_Name: ArcGIS Camera
+  m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -812,12 +622,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823688464}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.70710677, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 55416, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 208549027}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1823688468
 MonoBehaviour:
@@ -958,98 +768,6 @@ MonoBehaviour:
       enableFptlForForwardOpaque: 0
       enableBigTilePrepass: 0
       isFptlEnabled: 0
---- !u!114 &1823688469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1823688464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e295d62bf65a7247bc772a43507fd4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position:
-    X: -74
-    Y: 40.72
-    Z: 55416
-    SRWkid: 4326
-    SpatialReference:
-      WKID: 4326
-      VerticalWKID: 0
-    version: 1
-  rotation:
-    Heading: 0
-    Pitch: 0
-    Roll: 0
-  surfacePlacementMode: 0
-  surfacePlacementOffset: 0
-  version: 1
-  isInitialized: 1
---- !u!114 &1823688470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1823688464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27afbdfc83e47004e95ef7726ed4a9cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxSpeed: 2000000
-  MinSpeed: 1000
-  IgnoreUI: 0
-  EnableLeftDragging: 1
-  EnableRightDragging: 1
---- !u!114 &1823688471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1823688464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bbba49acb848c0448694828560b07fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UpdateClippingPlanes: 1
-  UseCameraViewportProperties: 1
-  verticalFov: 0
-  horizontalFov: 0
-  viewportSizeX: 0
-  viewportSizeY: 0
-  qualityScalingFactor: 1
---- !u!114 &1823688472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1823688464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea4c056ecab070c43bf3f5e9fb15b826, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IsInitialized: 1
-  m_LocalPosition:
-    x: -8237642.318702245
-    y: 55416
-    z: 4971129.040475637
-  m_LocalRotation:
-    value:
-      x: 0.70710677
-      y: 0
-      z: 0
-      w: 0.70710677
-  m_LocalScale:
-    x: 1
-    y: 1
-    z: 1
 --- !u!1 &2013410473
 GameObject:
   m_ObjectHideFlags: 1
@@ -1103,9 +821,8 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1823688467}
   - {fileID: 157207114}
   - {fileID: 432432461}
   - {fileID: 2013410475}
-  - {fileID: 208549027}
-  - {fileID: 1002344285}
-  - {fileID: 197556206}
+  - {fileID: 46082024}
