@@ -43,11 +43,12 @@ public class ShowData : MonoBehaviour
             ArcGISPoint point = new ArcGISPoint(readCSV.covidCaseList.covidCase[i].longitude, readCSV.covidCaseList.covidCase[i].latitude, 500, ArcGISSpatialReference.WGS84());
             double3 position = mapComponent.View.GeographicToWorld(point);
 
-
             Instantiate(sphere, 
                 new Vector3((float)position.x, (float)position.y, (float)position.z), 
                 transform.rotation,
                 transform);
+
+            //sphere.HPTransform((float)position.x, (float)position.y, (float)position.z);
 
             Debug.Log(readCSV.covidCaseList.covidCase[i].longitude + ","+
                 readCSV.covidCaseList.covidCase[i].latitude);
