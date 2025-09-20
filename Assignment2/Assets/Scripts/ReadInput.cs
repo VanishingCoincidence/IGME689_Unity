@@ -72,6 +72,9 @@ public class ReadInput : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// reset all images on the screen
+    /// </summary>
     public void ResetImages()
     {
         for(int i = 0; i < virusImages.Length; i++)
@@ -81,6 +84,10 @@ public class ReadInput : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// show virus pictures depending on how many cases of COVIS there were
+    /// </summary>
+    /// <param name="cases"></param>
     public void ShowViruses(float cases)
     {
         int count;
@@ -132,6 +139,10 @@ public class ReadInput : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// show skulls for how many COVID related deaths there were
+    /// </summary>
+    /// <param name="cases"></param>
     public void ShowSkulls(float cases)
     {
         int count;
