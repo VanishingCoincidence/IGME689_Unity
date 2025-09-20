@@ -211,7 +211,7 @@ Transform:
   m_GameObject: {fileID: 157207112}
   serializedVersion: 2
   m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 36, y: 100, z: 85}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -437,7 +437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   apiKey: AAPTxy8BH1VEsoebNVZXo8HurNr8CSYlBHKwAHOBnnbGOT7wOTEvTWipOAn_JU6CKU1-350mhxyPH26RdO3nyXbNqxGpDjrj9dVzKO7FBy6Cr7zCPpheBqXwntI3obB3MFHc-LItQLlwJeZ8kWbWSiXDbWhcO5Ie7sEQQMhYS5V1M38SQfR9I9KpoCnGlY1KLeDyip3Dku2PkGbVPZn2S007cQcC5wLY_8di6h9eKXajTl9aw1HnzROt9ThmyJLIhDVgAT1_sBvmEWDy
-  basemap: https://basemapstyles-api.arcgis.com/arcgis/rest/services/styles/v2/webmaps/arcgis/charted-territory
+  basemap: https://www.arcgis.com/home/item.html?id=c7d2b5c334364e8fb5b73b0f4d6a779b
   basemapType: 0
   basemapAuthentication:
     ConfigurationIndex: -1
@@ -472,77 +472,11 @@ MonoBehaviour:
       y: 4000000
     UseOriginAsCenter: 1
   layers:
-  - Name: COVID Cases
-    Type: 6
-    Source: https://services3.arcgis.com/qNmLqQsxa9OgafDD/arcgis/rest/services/COVID_19_Cases_(1)/MapServer
+  - Name: Global Buildings
+    Type: 1
+    Source: https://basemaps3d.arcgis.com/arcgis/rest/services/Esri3D_Buildings_v1/SceneServer
     Opacity: 1
-    IsVisible: 0
-    Authentication:
-      ConfigurationIndex: 0
-    AuthenticationType: 1
-    BuildingSceneLayerFilter:
-      ActiveBuildingAttributeFilterIndex: 0
-      BuildingAttributeFilters: []
-      IsBuildingAttributeFilterEnabled: 0
-      IsBuildingDisciplinesCategoriesFilterEnabled: 0
-      EnabledCategories: 
-      EnabledDisciplines: 
-    MeshModifications:
-      IsEnabled: 0
-      MeshModifications: []
-    SpatialFeatureFilter:
-      IsEnabled: 0
-      Polygons: []
-      Type: 0
-  - Name: Transit
-    Type: 0
-    Source: https://www.arcgis.com/home/item.html?id=1c28f1944276445a99f5b554c3c07771
-    Opacity: 0.9
-    IsVisible: 0
-    Authentication:
-      ConfigurationIndex: 0
-    AuthenticationType: 1
-    BuildingSceneLayerFilter:
-      ActiveBuildingAttributeFilterIndex: 0
-      BuildingAttributeFilters: []
-      IsBuildingAttributeFilterEnabled: 0
-      IsBuildingDisciplinesCategoriesFilterEnabled: 0
-      EnabledCategories: 
-      EnabledDisciplines: 
-    MeshModifications:
-      IsEnabled: 0
-      MeshModifications: []
-    SpatialFeatureFilter:
-      IsEnabled: 0
-      Polygons: []
-      Type: 0
-  - Name: industrial
-    Type: 0
-    Source: https://www.arcgis.com/home/item.html?id=1c28f1944276445a99f5b554c3c07771
-    Opacity: 0.6
-    IsVisible: 0
-    Authentication:
-      ConfigurationIndex: 0
-    AuthenticationType: 1
-    BuildingSceneLayerFilter:
-      ActiveBuildingAttributeFilterIndex: 0
-      BuildingAttributeFilters: []
-      IsBuildingAttributeFilterEnabled: 0
-      IsBuildingDisciplinesCategoriesFilterEnabled: 0
-      EnabledCategories: 
-      EnabledDisciplines: 
-    MeshModifications:
-      IsEnabled: 0
-      MeshModifications: []
-    SpatialFeatureFilter:
-      IsEnabled: 0
-      Polygons: []
-      Type: 0
-  - Name: pop density
-    Type: 0
-    Source: https://www.arcgis.com/home/item.html?id=7de726fabcc149f185b0bf8acde82878
-    Opacity: 0.5
-    IsVisible: 0
+    IsVisible: 1
     Authentication:
       ConfigurationIndex: 0
     AuthenticationType: 1
@@ -813,7 +747,7 @@ Transform:
   m_GameObject: {fileID: 1823688464}
   serializedVersion: 2
   m_LocalRotation: {x: 0.70710677, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 55416, z: 0}
+  m_LocalPosition: {x: -6113.778, y: 42657, z: -4222.993}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -971,9 +905,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position:
-    X: -74
-    Y: 40.72
-    Z: 55416
+    X: -74.054921
+    Y: 40.691242
+    Z: 42657
     SRWkid: 4326
     SpatialReference:
       WKID: 4326
@@ -1037,9 +971,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IsInitialized: 1
   m_LocalPosition:
-    x: -8237642.318702245
-    y: 55416
-    z: 4971129.040475637
+    x: -8243756.096456101
+    y: 42657
+    z: 4966906.047235179
   m_LocalRotation:
     value:
       x: 0.70710677
