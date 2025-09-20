@@ -37,20 +37,12 @@ public class ShowData : MonoBehaviour
         for (int i = 0; i < readCSV.covidCaseList.size; i++)
         {
             // chose 100 to be over top of the map
-            //double3 position = new double3((double)readCSV.covidCaseList.covidCase[i].latitude, (double)readCSV.covidCaseList.covidCase[i].longitude, 100);
+            double3 position = new double3((double)readCSV.covidCaseList.covidCase[i].latitude, (double)readCSV.covidCaseList.covidCase[i].longitude, 100);
             //double3 worldPosition = math.inverse(mapComponent.WorldMatrix).HPTransform(position);
             //ArcGISPoint geoPosition = mapComponent.View.WorldToGeographic(worldPosition);
             //ArcGISPoint offsetPosition = new ArcGISPoint(geoPosition.X, geoPosition.Y, geoPosition.Z, geoPosition.SpatialReference);
-            ArcGISPoint point = new ArcGISPoint(readCSV.covidCaseList.covidCase[i].longitude, readCSV.covidCaseList.covidCase[i].latitude, 1000, ArcGISSpatialReference.WGS84());
-            double3 position = mapComponent.View.GeographicToWorld(point);
 
-            GameObject citySphere = Instantiate(sphere, 
-                new Vector3((float)position.x, (float)position.y, (float)position.z), 
-                transform.rotation,
-                transform);
-
-            citySphere.GetComponent<ArcGISLocationComponent>().Position = point;
-            citySphere.GetComponent<ArcGISLocationComponent>().Rotation = new ArcGISRotation(0, 90, 0);
+            Instantiate(sphere, new Vector3((float)position.x, (float)position.y, (float)position.z), transform.rotation, transform);
 
             //sphere.HPTransform((float)position.x, (float)position.y, (float)position.z);
 
@@ -59,12 +51,12 @@ public class ShowData : MonoBehaviour
         }
     }
 
-    public void ShowConfirmedCases()
-    {
-        for(int i = 0; i < readCSV.covidCaseList.size; i++)
-        {
-
-        }
-        
-    }
+    //public void ShowConfirmedCases()
+    //{
+    //    for(int i = 0; i < readCSV.covidCaseList.size; i++)
+    //    {
+    //
+    //    }
+    //    
+    //}
 }
