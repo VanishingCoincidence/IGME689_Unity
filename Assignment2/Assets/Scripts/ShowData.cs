@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Esri.ArcGISMapsSDK.Components;
 using Esri.GameEngine.Geometry;
+using Esri.ArcGISMapsSDK.Utils.GeoCoord;
 using Esri.HPFramework;
 using Unity.Mathematics;
 
@@ -40,13 +41,16 @@ public class ShowData : MonoBehaviour
             //double3 worldPosition = math.inverse(mapComponent.WorldMatrix).HPTransform(position);
             //ArcGISPoint geoPosition = mapComponent.View.WorldToGeographic(worldPosition);
             //ArcGISPoint offsetPosition = new ArcGISPoint(geoPosition.X, geoPosition.Y, geoPosition.Z, geoPosition.SpatialReference);
-            ArcGISPoint point = new ArcGISPoint(readCSV.covidCaseList.covidCase[i].longitude, readCSV.covidCaseList.covidCase[i].latitude, 500, ArcGISSpatialReference.WGS84());
+            ArcGISPoint point = new ArcGISPoint(readCSV.covidCaseList.covidCase[i].longitude, readCSV.covidCaseList.covidCase[i].latitude, 1000, ArcGISSpatialReference.WGS84());
             double3 position = mapComponent.View.GeographicToWorld(point);
 
-            Instantiate(sphere, 
+            GameObject citySphere = Instantiate(sphere, 
                 new Vector3((float)position.x, (float)position.y, (float)position.z), 
                 transform.rotation,
                 transform);
+
+            citySphere.GetComponent<ArcGISLocationComponent>().Position = point;
+            citySphere.GetComponent<ArcGISLocationComponent>().Rotation = new ArcGISRotation(0, 90, 0);
 
             //sphere.HPTransform((float)position.x, (float)position.y, (float)position.z);
 
