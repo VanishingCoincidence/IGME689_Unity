@@ -385,7 +385,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7555913845089639993}
   serializedVersion: 5
-  m_Mass: 100
+  m_Mass: 1000
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -426,8 +426,11 @@ MonoBehaviour:
   rRWheelMesh: {fileID: 7555913845091829587}
   forwardInput: 0
   steeringInput: 0
+  brakeInput: 0
   force: 0
   speed: 0
+  brake: 0
+  slipAngle: 0
   steering:
     serializedVersion: 2
     m_Curve: []
