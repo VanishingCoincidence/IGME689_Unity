@@ -12,11 +12,14 @@ public class GameManager : MonoBehaviour
     public bool timerOn;
     public float timeLeft;
 
+    [SerializeField] AudioManager audioManager;
+
     void Start()
     {
         timer.enabled = true;
         winScreen.enabled = false;
         loseScreen.enabled = false;
+        this.GetComponent<Collider>().enabled = true;
 
         timerOn = true;
     }
@@ -44,7 +47,6 @@ public class GameManager : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("here");
         if (other.GetComponent<Collider>().tag == "Player")
         {
             win = true;
@@ -70,13 +72,18 @@ public class GameManager : MonoBehaviour
     {
         if (win)
         {
+            timerOn = false;
             timer.enabled = false;
             winScreen.enabled = true;
+            audioManager.Play("winSound");
         }
         else
         {
+            timerOn = false;
             timer.enabled = false;
             loseScreen.enabled = true;
+            audioManager.Play("loseSound");
+            this.GetComponent<Collider>().enabled = false;
         }
     }
     

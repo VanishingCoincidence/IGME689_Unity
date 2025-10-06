@@ -30,9 +30,12 @@ public class CarController : MonoBehaviour
     public float slipAngle;
     public AnimationCurve steering;
 
+    public bool isPlaying;
+
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();
+        isPlaying = false;
     }
 
     void FixedUpdate()
@@ -44,6 +47,18 @@ public class CarController : MonoBehaviour
         Move();
         Steer();
         Brake();
+
+        if(forwardInput != 0 && !isPlaying)
+        {
+            FindFirstObjectByType<AudioManager>().Play("carSound");
+            isPlaying = true;
+        }
+        
+        if(forwardInput == 0)
+        {
+            FindFirstObjectByType<AudioManager>().Stop("carSound");
+            isPlaying = false;
+        }
     }
 
     void CheckInput()
@@ -60,6 +75,7 @@ public class CarController : MonoBehaviour
             brakeInput = Mathf.Abs(forwardInput);
             // reset
             forwardInput = 0;
+            //FindFirstObjectByType<AudioManager>().Stop("carSound");
         }
         else
         {
