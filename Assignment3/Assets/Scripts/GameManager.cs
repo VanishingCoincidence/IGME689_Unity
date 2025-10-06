@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        // handles timer being updated
         if(timerOn)
         {
             if(timeLeft > 0)

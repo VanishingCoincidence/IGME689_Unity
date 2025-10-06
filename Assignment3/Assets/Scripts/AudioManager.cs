@@ -8,6 +8,7 @@ public class AudioManager : MonoBehaviour
 
     void Awake()
     {
+        // adds the necesary info to sound class items
         foreach (Sound sound in sounds)
         {
             sound.source = gameObject.AddComponent<AudioSource>();
@@ -19,14 +20,14 @@ public class AudioManager : MonoBehaviour
 
     public void Play(string name)
     {
-        Debug.Log(name + "playing");
+        // finds sound in array by name
         Sound temp = Array.Find(sounds, sound => sound.name == name);
         temp.source.Play();
     }
 
     public void Stop(string name)
     {
-        Debug.Log(name + "playing");
+        // finds sound in array by name
         Sound temp = Array.Find(sounds, sound => sound.name == name);
         temp.source.Stop();
     }
