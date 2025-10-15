@@ -1,4 +1,4 @@
-﻿X,Y,OBJECTID,Province_State,Country_Region,Lat,Long_,Confirmed,Recovered,Deaths,Active,Admin2,FIPS,Combined_Key,Incident_Rate,People_Tested,People_Hospitalized,UID,ISO3
+﻿X,Y,OBJECTID,Province_State,Country_Region,Lat,Long_,Confirmed,Deaths,Admin2,FIPS,Combined_Key,Incident_Rate,UID,ISO3
 -86.8950629999999,33.55554728,37,Alabama,US,33.55554728,-86.895063,229633,2495,Jefferson,01073,"Jefferson, Alabama, US",34868.268210206,84001073,USA
 -112.4918154,33.34835867,108,Arizona,US,33.34835867,-112.4918154,1492148,18520,Maricopa,04013,"Maricopa, Arizona, US",33266.6728199448,84004013,USA
 -92.31355101,34.7705408800001,177,Arkansas,US,34.77054088,-92.31355101,125960,1302,Pulaski,05119,"Pulaski, Arkansas, US",32139.9501417414,84005119,USA

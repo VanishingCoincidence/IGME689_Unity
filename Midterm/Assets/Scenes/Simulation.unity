@@ -400,7 +400,7 @@ MonoBehaviour:
     - Name: Terrain 3D
       Type: 0
       Source: https://elevation3d.arcgis.com/arcgis/rest/services/WorldElevation3D/Terrain3D/ImageServer
-      IsEnabled: 1
+      IsEnabled: 0
       Authentication:
         ConfigurationIndex: -1
       AuthenticationType: 1
@@ -428,8 +428,8 @@ MonoBehaviour:
   - Name: Global Buildings
     Type: 1
     Source: https://basemaps3d.arcgis.com/arcgis/rest/services/Esri3D_Buildings_v1/SceneServer
-    Opacity: 0.287
-    IsVisible: 1
+    Opacity: 0
+    IsVisible: 0
     Authentication:
       ConfigurationIndex: 0
     AuthenticationType: 1
@@ -3658,6 +3658,6 @@ SceneRoots:
   - {fileID: 2013410475}
   - {fileID: 208549027}
   - {fileID: 1002344285}
-  - {fileID: 1787828272}
   - {fileID: 372233267}
   - {fileID: 530580285}
+  - {fileID: 1787828272}
