@@ -7,9 +7,12 @@ using UnityEngine;
 public class PlaceManager : MonoBehaviour
 {
     public ArcGISMapComponent arcgisMap;
+    public GameObject placePrefab;
+    public LineRenderer lineRenderer;
     
     private DataLoader dataLoader;
     public List<Place> places;
+    public Transform spawnPosition;
 
 
     void Awake()
@@ -22,16 +25,32 @@ public class PlaceManager : MonoBehaviour
 
     void Start()
     {
-        
+        SpawnPlaces();
+        SpawnConnections();
     }
 
     private void SpawnPlaces()
     {
-        
+        foreach (var county in dataLoader.placeDataList)
+        {
+            Place place = Instantiate(placePrefab, spawnPosition).GetComponent<Place>();
+            place.placeData = county;
+            places.Add(place);
+        }
     }
     
     private void SpawnConnections()
     {
+        int connectionCount = 0;
+        foreach (var county in dataLoader.placeDataList)
+        {
+            foreach (var connection in county.Connected_Places)
+            {
+                lineRenderer.SetPosition(connectionCount, new Vector3((float)connection.Latitude, (float)connection.Longitude));
+                connectionCount++;
+            }
+        }
+        
         
     }
 

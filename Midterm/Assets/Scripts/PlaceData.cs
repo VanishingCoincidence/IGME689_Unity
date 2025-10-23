@@ -40,7 +40,7 @@ public class PlaceData
         double distance = Math.Sqrt(x + y);
         distance = Math.Abs(distance);
         
-        if (distance < 5)
+        if (distance < 5 && Connected_Places.Count < 5)
         {
             this.Connected_Places.Add(b);
             b.Connected_Places.Add(this);

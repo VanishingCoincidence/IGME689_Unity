@@ -17,7 +17,7 @@ public class DataLoader
     public List<PlaceData> placeDataList;
 
     public string url =
-        "https://services2.arcgis.com/RQcpPaCpMAXzUI5g/arcgis/rest/services/COVID_19_Cases_Major/FeatureServer/0/query?f=geojson&where=1=1&outfields=*";
+        "https://services2.arcgis.com/RQcpPaCpMAXzUI5g/arcgis/rest/services/COVID_19_Cases_Major_Again/FeatureServer/0/query?f=geojson&where=1=1&outfields=*";
     
     public DataLoader()
     {

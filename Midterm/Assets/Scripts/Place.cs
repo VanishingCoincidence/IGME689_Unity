@@ -5,13 +5,10 @@ using UnityEngine;
 
 public class Place : MonoBehaviour
 {
-    [SerializeField] private PlaceData placeData;
+    public PlaceData placeData;
     
     public ArcGISLocationComponent arcgisLocation;
 
-    public GameObject locationObject;
-    public int size;
-    
     void Awake()
     {
         arcgisLocation = GetComponent<ArcGISLocationComponent>();
@@ -19,7 +16,7 @@ public class Place : MonoBehaviour
 
     void Start()
     {
-        //arcgisLocation.Position = new ArcGISPoint();
+        arcgisLocation.Position = new ArcGISPoint(placeData.Longitude, placeData.Latitude, 0, ArcGISSpatialReference.WGS84());
     }
     
     private void OnMouseDown()
