@@ -1,16 +1,29 @@
+using Esri.ArcGISMapsSDK.Components;
+using Esri.ArcGISMapsSDK.Utils.GeoCoord;
+using Esri.GameEngine.Geometry;
 using UnityEngine;
 
 public class Place : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private PlaceData placeData;
+    
+    public ArcGISLocationComponent arcgisLocation;
+
+    public GameObject locationObject;
+    public int size;
+    
+    void Awake()
     {
-        
+        arcgisLocation = GetComponent<ArcGISLocationComponent>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-        
+        //arcgisLocation.Position = new ArcGISPoint();
+    }
+    
+    private void OnMouseDown()
+    {
+        Debug.Log("CLICK");
     }
 }

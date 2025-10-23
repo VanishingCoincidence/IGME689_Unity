@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 
 public class PlaceData
@@ -24,31 +25,32 @@ public class PlaceData
         Deaths = deaths;
         Incident_Rate = incidentRate;
         
-        //Connected_Places = new List<Place>();
+        Connected_Places = new List<PlaceData>();
     }
     
-    /*public static void ConnectPlaces(Place a, Place b)
+    public void ConnectPlaces(PlaceData b)
     {
         // see if the two places are close enough to one another
-        double x = b.Latitude - a.Latitude;
+        double x = b.Latitude - Latitude;
         x = Math.Pow(x, 2);
         
-        double y = b.Longitude - a.Longitude;
+        double y = b.Longitude - Longitude;
         y = Math.Pow(y, 2);
 
         double distance = Math.Sqrt(x + y);
         distance = Math.Abs(distance);
-
-        if (distance < 100)
+        
+        if (distance < 5)
         {
-            a.Connected_Places.Add(b);
-            b.Connected_Places.Add(a);
+            this.Connected_Places.Add(b);
+            b.Connected_Places.Add(this);
+            Debug.Log(County + " and " + b.County + " connected");
         }
     }
 
-    public bool IsConnected(Place otherPlace)
+    public bool IsConnected(PlaceData otherPlace)
     {
         return Connected_Places.Contains(otherPlace);
-    }*/
+    }
     
 }

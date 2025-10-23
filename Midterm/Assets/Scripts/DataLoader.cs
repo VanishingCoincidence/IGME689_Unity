@@ -93,7 +93,7 @@ public class DataLoader
             }
 
             //coordinate.ToArray();
-            Debug.Log("coordinate: " + coordinates[1] + " " + coordinates[0]);
+            //Debug.Log("coordinate: " + coordinates[1] + " " + coordinates[0]);
             double x = Convert.ToDouble(coordinates[1]);
             double y = Convert.ToDouble(coordinates[0]);
 
@@ -102,6 +102,18 @@ public class DataLoader
                 placeDataList.Add(new PlaceData(state, county, y,x,confirmed, deaths, incidentRate));
             }
             
+        }
+
+        foreach (var place1 in placeDataList)
+        {
+            foreach (var place2 in placeDataList)
+            {
+                // don't connect with itself nor connect with something it's already connected to
+                if (place1.County != place2.County && !place1.Connected_Places.Contains(place2))
+                {
+                    place1.ConnectPlaces(place2);
+                }
+            }
         }
         
     }
