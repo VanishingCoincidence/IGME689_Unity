@@ -6,7 +6,6 @@ using UnityEngine;
 public class Place : MonoBehaviour
 {
     public PlaceData placeData;
-    
     public ArcGISLocationComponent arcgisLocation;
 
     void Awake()
@@ -17,10 +16,5 @@ public class Place : MonoBehaviour
     void Start()
     {
         arcgisLocation.Position = new ArcGISPoint(placeData.Longitude, placeData.Latitude, 0, ArcGISSpatialReference.WGS84());
-    }
-    
-    private void OnMouseDown()
-    {
-        Debug.Log("CLICK");
     }
 }
