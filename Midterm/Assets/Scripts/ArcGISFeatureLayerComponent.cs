@@ -57,6 +57,8 @@ public class ArcGISFeatureLayerComponent : MonoBehaviour
     [SerializeField] private SplineContainer splineContainer;
     [SerializeField] private GameObject point;
     private ArcGISMapComponent mapComponent;
+
+    //public List<Place> placeList;
     
     private LineRenderer lineRenderer;
     [SerializeField] public GameObject Line;
@@ -67,8 +69,9 @@ public class ArcGISFeatureLayerComponent : MonoBehaviour
     {
         StartCoroutine(nameof(GetFeatures));
         mapComponent = FindFirstObjectByType<ArcGISMapComponent>();
-        
-        lineRenderer = Line.GetComponent<LineRenderer>();
+        //placeList = new List<Place>();
+
+        //lineRenderer = Line.GetComponent<LineRenderer>();
     }
 
     public void CreateLink(string link)
@@ -133,21 +136,27 @@ public class ArcGISFeatureLayerComponent : MonoBehaviour
                 currentFeature.Properties.PropertyNames.Add(props[0]);
                 currentFeature.Properties.Data.Add(props[1]);
                 //featureInfo.Properties.Add(key);
+                
+                 
             }
             
             //coordinate.ToArray();
             Debug.Log("coordinate: " + coordinates[1] + " " + coordinates[0]);
             currentFeature.Geometry.Latitude = Convert.ToDouble(coordinates[1]);
             currentFeature.Geometry.Longitude = Convert.ToDouble(coordinates[0]);
+            
             // Create new ArcGIS Point and pass the Feature Lat and Long to it
-            var position = new ArcGISPoint(currentFeature.Geometry.Longitude, currentFeature.Geometry.Latitude, spawnHeight, new ArcGISSpatialReference(3857));
+            var arcPosition = new ArcGISPoint(currentFeature.Geometry.Longitude, currentFeature.Geometry.Latitude, spawnHeight, ArcGISSpatialReference.WGS84());
+            Debug.Log("arcPosition: " + arcPosition.X + " " + arcPosition.Y + " " + arcPosition.Z);
 
             // Create new Bezier Knot that stores transform data
             BezierKnot bezierKnot = new BezierKnot();
 
             // Convert ArcGISPoint to Engine Coordinates
-            bezierKnot.Position = mapComponent.GeographicToEngine(position);
-            Instantiate(point, bezierKnot.Position, Quaternion.identity);
+            var position = mapComponent.GeographicToEngine(arcPosition);
+            Debug.Log("position: " + position);
+            GameObject county = Instantiate(point, position, Quaternion.identity);
+            //county.GetComponent<ArcGISLocationComponent>().Position = new ArcGISPoint(currentFeature.Geometry.Longitude, currentFeature.Geometry.Latitude, spawnHeight, new ArcGISSpatialReference(3857));
 
             // Add converted position to the splines container
             splineContainer.Splines[0].Add(bezierKnot);

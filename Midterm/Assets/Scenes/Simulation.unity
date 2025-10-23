@@ -119,78 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &113240023
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 113240025}
-  - component: {fileID: 113240024}
-  m_Layer: 0
-  m_Name: SplineContainer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &113240024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 113240023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dab5c7d4c32e743048dfca98e2d5914f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Spline:
-    m_EditModeType: 1
-    m_Knots: []
-    m_MetaData: []
-    m_Closed: 0
-    m_IntData:
-      m_Data: []
-    m_FloatData:
-      m_Data: []
-    m_Float4Data:
-      m_Data: []
-    m_ObjectData:
-      m_Data: []
-  m_Splines:
-  - m_EditModeType: 1
-    m_Knots: []
-    m_MetaData: []
-    m_Closed: 0
-    m_IntData:
-      m_Data: []
-    m_FloatData:
-      m_Data: []
-    m_Float4Data:
-      m_Data: []
-    m_ObjectData:
-      m_Data: []
-  m_Knots:
-    m_KnotsLink: []
---- !u!4 &113240025
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 113240023}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &157207112
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,12 +448,12 @@ MonoBehaviour:
       Polygons: []
       Type: 0
   originPosition:
-    X: -10762330
-    Y: 4794130
+    X: 44.58
+    Y: 103.46
     Z: 0
-    SRWkid: 3857
+    SRWkid: 4326
     SpatialReference:
-      WKID: 3857
+      WKID: 4326
       VerticalWKID: 0
     version: 1
   mapType: 1
@@ -580,7 +508,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1823688467}
-  - {fileID: 1002344285}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &432432459
@@ -742,8 +669,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1002344285}
-  - component: {fileID: 1002344288}
-  - component: {fileID: 1002344287}
   - component: {fileID: 1002344286}
   m_Layer: 0
   m_Name: DataHolder
@@ -760,12 +685,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002344283}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10762255, y: 0, z: -4794101}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 208549027}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1002344286
 MonoBehaviour:
@@ -776,74 +701,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1002344283}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f23448287c2ff244cb3c77dc44de611c, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a1f79abbfe861243ae6d82b7a0bd35b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  featurePrefab: {fileID: 7281497812055037492, guid: 4ffcd818186740741bff83cdfa27e7da, type: 3}
-  FeatureItems: []
-  WebLink:
-    Link: https://services2.arcgis.com/RQcpPaCpMAXzUI5g/arcgis/rest/services/COVID_19_Cases_Major/FeatureServer/0/query?f=geojson&where=1=1&outfields=*
-    RequestHeaders: []
-  splineContainer: {fileID: 113240024}
-  point: {fileID: 7281497812055037492, guid: 4ffcd818186740741bff83cdfa27e7da, type: 3}
-  Line: {fileID: 0}
-  LineMarker: {fileID: 0}
---- !u!114 &1002344287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1002344283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e295d62bf65a7247bc772a43507fd4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position:
-    X: -75.29370693172181
-    Y: 28.834017061256358
-    Z: 0
-    SRWkid: 3857
-    SpatialReference:
-      WKID: 3857
-      VerticalWKID: 0
-    version: 1
-  rotation:
-    Heading: 0
-    Pitch: 90
-    Roll: 0
-  surfacePlacementMode: 0
-  surfacePlacementOffset: 0
-  version: 1
-  isInitialized: 1
---- !u!114 &1002344288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1002344283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea4c056ecab070c43bf3f5e9fb15b826, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IsInitialized: 1
-  m_LocalPosition:
-    x: -75.29370693172181
-    y: 0
-    z: 28.834017061256358
-  m_LocalRotation:
-    value:
-      x: 0
-      y: 0
-      z: 0
-      w: 1
-  m_LocalScale:
-    x: 1
-    y: 1
-    z: 1
 --- !u!1 &1787828269
 GameObject:
   m_ObjectHideFlags: 0
@@ -1172,12 +1032,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position:
-    X: -10762330
-    Y: 4794130
+    X: 44.58
+    Y: 103.46
     Z: 3397706
-    SRWkid: 3857
+    SRWkid: 4326
     SpatialReference:
-      WKID: 3857
+      WKID: 4326
       VerticalWKID: 0
     version: 1
   rotation:
@@ -1310,4 +1170,4 @@ SceneRoots:
   - {fileID: 208549027}
   - {fileID: 530580285}
   - {fileID: 1787828272}
-  - {fileID: 113240025}
+  - {fileID: 1002344285}
