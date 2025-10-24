@@ -34,6 +34,9 @@ public class GameManager : MonoBehaviour
     public Button researchButton;
     public Button gainToolsButton;
     public Button recruitButton;
+
+    public Canvas tutorialCanvas;
+    public Button proceedButton;
     
     public TMP_Text pointsInfo;
     public TMP_Text totalCaseInfo;
@@ -55,9 +58,11 @@ public class GameManager : MonoBehaviour
         winImage.enabled = false;
         legendCanvas.enabled = false;
         personCanvas.enabled = false;
+        tutorialCanvas.enabled = true;
         
         endTurnButton.onClick.AddListener(EndTurn);
         legendButton.onClick.AddListener(ToggleLegend);
+        proceedButton.onClick.AddListener(Proceed);
         
         moveDropdown.onValueChanged.AddListener(Move);
         cureButton.onClick.AddListener(Cure);
@@ -342,6 +347,11 @@ public class GameManager : MonoBehaviour
     void UpdatePoints()
     {
         pointsInfo.text = "Points: " + currentPlayerPoints;
+    }
+
+    void Proceed()
+    {
+        tutorialCanvas.enabled = false;
     }
     
     

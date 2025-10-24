@@ -679,6 +679,11 @@ MonoBehaviour:
   spawnPosition: {fileID: 528787472}
   people: []
   personPrefab: {fileID: 1270817165374409979, guid: ffa2b39f401713745861988d6781e41e, type: 3}
+--- !u!223 &1308198174 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 5509086076527735850, guid: 437b1aa408520fd448a4b3dcdf184eda, type: 3}
+  m_PrefabInstance: {fileID: 6781311273815188058}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1361024176 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2636034664053881214, guid: 437b1aa408520fd448a4b3dcdf184eda, type: 3}
@@ -769,6 +774,8 @@ MonoBehaviour:
   researchButton: {fileID: 1433550582}
   gainToolsButton: {fileID: 1535669689}
   recruitButton: {fileID: 1368693421}
+  tutorialCanvas: {fileID: 1308198174}
+  proceedButton: {fileID: 6781311273815188062}
   pointsInfo: {fileID: 1361024176}
   totalCaseInfo: {fileID: 1814017619}
   endTurnButton: {fileID: 2130773242}
@@ -1487,6 +1494,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6781311273815188062 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9158435491267591256, guid: 437b1aa408520fd448a4b3dcdf184eda, type: 3}
+  m_PrefabInstance: {fileID: 6781311273815188058}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
