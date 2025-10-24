@@ -66,7 +66,7 @@ public class PlaceManager : MonoBehaviour
                 person.latitude = p.placeData.Latitude;
                 person.longitude = p.placeData.Longitude;
                 people.Add(person);
-                continue;
+                break;
             }
 
         }

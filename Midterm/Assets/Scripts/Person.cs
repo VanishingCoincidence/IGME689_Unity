@@ -29,6 +29,11 @@ public class Person : MonoBehaviour
         renderer.material.color = colorDefault;
     }
 
+    public void Move(double lon, double lat)
+    {
+        arcgisLocation.Position = new ArcGISPoint(lon + offset, lat, 0, ArcGISSpatialReference.WGS84());
+    }
+
     private void OnMouseEnter()
     {
         renderer.material.color = colorHover;
