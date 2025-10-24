@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public Canvas placeCanvas;
     public TMP_Text placeInfo;
     public TMP_Text currentCaseInfo;
+    public TMP_Text connectedInfo;
     
     public Canvas personCanvas;
     public TMP_Text personPlaceInfo;
@@ -173,10 +174,17 @@ public class GameManager : MonoBehaviour
     {
         if (currentPlayerPoints >= 4)
         {
+            string seed = Time.time.ToString();
+            System.Random rng = new System.Random(seed.GetHashCode());
+
+            if (rng.Next(0, 100) <= currentPlace.placeData.ChanceToRecruit)
+            {
+                placeManager.SpawnPerson(currentPlace.placeData.County);
+            }
+            
             personCanvas.enabled = false;
             currentPlayerPoints -= 4;
             UpdatePoints();
-            placeManager.SpawnPerson(currentPlace.placeData.County);
         }
     }
 
@@ -260,7 +268,7 @@ public class GameManager : MonoBehaviour
             loseImage.enabled = true;
         }
 
-        if (totalCases == 0)
+        if (totalCases <= 0)
         {
             winImage.enabled = true;
         }
@@ -268,6 +276,33 @@ public class GameManager : MonoBehaviour
         placeCanvas.enabled = false;
         personCanvas.enabled = false;
         UpdatePoints();
+        Spread();
+    }
+
+    void Spread()
+    {
+        string seed = Time.time.ToString();
+        System.Random rng = new System.Random(seed.GetHashCode());
+
+        foreach (Place p in placeManager.places)
+        {
+            if (rng.Next(0, 100) <= p.placeData.ChanceToGain)
+            {
+                p.placeData.CurrentCases++;
+                p.UpdateColor();
+            }
+
+            if (p.placeData.CurrentCases > 5)
+            {
+                foreach (PlaceData place in p.placeData.Connected_Places)
+                {
+                    place.CurrentCases++;
+                    p.UpdateColor();
+                }
+            }
+        }
+        
+        UpdateTotalCases();
     }
 
     void FixPlaceInfo(Place place)
@@ -276,6 +311,14 @@ public class GameManager : MonoBehaviour
         {
             if (p.placeData.County == place.placeData.County)
             {
+                string placesCanTravel = "Places can travel: ";
+
+                foreach (PlaceData placeData in p.placeData.Connected_Places)
+                {
+                    placesCanTravel += " " + placeData.County + ", " + placeData.State + " |";
+                }
+                
+                connectedInfo.text = placesCanTravel;
                 placeInfo.text = p.placeData.County + ", " + p.placeData.State;
                 currentCaseInfo.text = "Cases: " + p.placeData.CurrentCases;
                 break;

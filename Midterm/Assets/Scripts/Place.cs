@@ -47,7 +47,7 @@ public class Place : MonoBehaviour
 
     public void UpdateColor()
     {
-        FindDefaultColor();
+        renderer.material.color = FindDefaultColor();
     }
 
     private Color32 FindDefaultColor()

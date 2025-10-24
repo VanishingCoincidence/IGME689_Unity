@@ -759,6 +759,7 @@ MonoBehaviour:
   placeCanvas: {fileID: 586840324}
   placeInfo: {fileID: 1862694061}
   currentCaseInfo: {fileID: 2072741950}
+  connectedInfo: {fileID: 2051729165}
   personCanvas: {fileID: 756228454}
   personPlaceInfo: {fileID: 6781311273815188061}
   personCurrentCaseInfo: {fileID: 6781311273815188060}
@@ -1290,6 +1291,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2051729165 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5986771913297964821, guid: 437b1aa408520fd448a4b3dcdf184eda, type: 3}
+  m_PrefabInstance: {fileID: 6781311273815188058}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2072741950 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5829612763560095516, guid: 437b1aa408520fd448a4b3dcdf184eda, type: 3}
