@@ -13,12 +13,14 @@ public class PlaceManager : MonoBehaviour
 {
     public ArcGISMapComponent arcgisMap;
     public GameObject placePrefab;
-    //public LineRenderer lineRenderer;
     public GameObject linePrefab;
     
     private DataLoader dataLoader;
     public List<Place> places;
     public Transform spawnPosition;
+    
+    public List<Person> people = new List<Person>();
+    public GameObject personPrefab;
 
     void Awake()
     {
@@ -40,6 +42,7 @@ public class PlaceManager : MonoBehaviour
 
         SpawnPlaces();
         SpawnConnections();
+        InitialPersonSpawn();
     }
 
     private void SpawnPlaces()
@@ -50,6 +53,30 @@ public class PlaceManager : MonoBehaviour
             place.placeData = county;
             places.Add(place);
         }
+    }
+    
+    public void SpawnPerson(string county)
+    {
+        foreach (Place p in places)
+        {
+            if (p.placeData.County == county)
+            {
+                Person person = Instantiate(personPrefab, spawnPosition).GetComponent<Person>();
+                person.currentCounty = p;
+                person.latitude = p.placeData.Latitude;
+                person.longitude = p.placeData.Longitude;
+                people.Add(person);
+                continue;
+            }
+
+        }
+    }
+    
+    void InitialPersonSpawn()
+    {
+        // first two people spawn in Harris county and Washington DC
+        SpawnPerson(" Harris");
+        SpawnPerson(" District of Columbia");
     }
     
     private void SpawnConnections()
@@ -64,24 +91,16 @@ public class PlaceManager : MonoBehaviour
                 
                 var arcPosition = new ArcGISPoint(county.Longitude, county.Latitude, 90, ArcGISSpatialReference.WGS84());
                 var position = arcgisMap.GeographicToEngine(arcPosition);
-                //var position = arcgisMap.View.GeographicToWorld(arcPosition).ToVector3();
                 var arcPosition2 = new ArcGISPoint(connection.Longitude, connection.Latitude, 90, ArcGISSpatialReference.WGS84());
                 var position2 = arcgisMap.GeographicToEngine(arcPosition2);
-                //var position2 = arcgisMap.View.GeographicToWorld(arcPosition2).ToVector3();
                 
                 // draw a line between the two counties
                 connectionPath.positionCount = 2;
                 connectionPath.SetPosition(0, position);
                 connectionPath.SetPosition(1, position2);
-                Debug.Log(position + " " + position2);
+                //Debug.Log(position + " " + position2);
             }
         }
     }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

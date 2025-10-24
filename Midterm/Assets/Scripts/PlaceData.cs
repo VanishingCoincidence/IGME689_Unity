@@ -10,6 +10,7 @@ public class PlaceData
     public double Longitude;
     public double Latitude;
     public int StartingCases;
+    public int CurrentCases;
     public float ChanceToGain;
     public float ChanceToRecruit;
     public List<PlaceData> Connected_Places;
@@ -23,6 +24,7 @@ public class PlaceData
         Latitude = latitude;
         
         StartingCases = SetStarting(confirmed);
+        CurrentCases = StartingCases;
         ChanceToGain = SetGainMore(incidentRate);
         ChanceToRecruit = SetSucceedRecruit(deaths);
         
