@@ -180,3 +180,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arcgisLocation: {fileID: 4028873453660410430}
+  hoverMaterial: {fileID: 2100000, guid: 2966c454991be6f49a07a7bfcb3b055b, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: c6bde4a709c68b84baff2085f334702a, type: 2}

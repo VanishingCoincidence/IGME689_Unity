@@ -7,6 +7,10 @@ public class Place : MonoBehaviour
 {
     public PlaceData placeData;
     public ArcGISLocationComponent arcgisLocation;
+    
+    private Renderer renderer;
+    public Material hoverMaterial;
+    public Material defaultMaterial;
 
     void Awake()
     {
@@ -16,5 +20,17 @@ public class Place : MonoBehaviour
     void Start()
     {
         arcgisLocation.Position = new ArcGISPoint(placeData.Longitude, placeData.Latitude, 0, ArcGISSpatialReference.WGS84());
+        renderer = GetComponent<Renderer>();
+        renderer.material = defaultMaterial;
+    }
+
+    private void OnMouseEnter()
+    {
+        renderer.material = hoverMaterial;
+    }
+
+    private void OnMouseExit()
+    {
+        renderer.material = defaultMaterial;
     }
 }
